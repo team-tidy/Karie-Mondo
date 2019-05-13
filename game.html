@@ -24,8 +24,24 @@
         <p>Does this item spark joy? Or is it clutter?</p>
         <img id="item-image" alt="item-image">
         <p id="item-name"></p>
-        <button id="joy-button">Sparks Joy</button>
-        <button id="clutter-button">Clutter</button>
+        <form id="choice-form">
+            <fieldset id="radio-buttons">
+                <legend>
+                Would this item spark joy for Alex?
+                </legend>
+                <div>
+                    <input name="spark-joy?" value="sparks-joy" type="radio" id="sparks-joy">
+                    <label for="spark-joy?">Sparks Joy!</label>
+                </div>
+                <div>
+                    <input name="spark-joy?" value="thank-you" type="radio" id="thank-you">
+                    <label for="spark-joy?">Thank you, next.</label>
+                </div>
+                <div>
+                    <button id="submit-button">Make Your Choice!</button>
+                </div>
+            </fieldset>
+        </form>
     </main>
     <script type="module" src="./src/game/game.js"></script>
 </body>
