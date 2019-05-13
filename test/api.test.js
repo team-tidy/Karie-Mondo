@@ -1,18 +1,13 @@
+import api from '../src/services/api.js';
+
 const test = QUnit.test;
 
 QUnit.module('api');
+api.storage = sessionStorage;
 
-const api = {
-    saveUser(user) {
-        const json = JSON.stringify(user);
-        localStorage.setItem('user', json);
-    },
-    getUser() {
-        const json = localStorage.getItem('user');
-        const user = JSON.parse(json);
-        return user;
-    }
-};
+QUnit.testStart(() => {
+    sessionStorage.clear();
+});
 
 test('round trip of object destined for storage', assert => {
     // arrange
