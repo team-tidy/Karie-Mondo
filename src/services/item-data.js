@@ -3,7 +3,7 @@ const item1 = {
     name: 'Sticker Book',
     image: 'stick',
     keywords: {
-        sticker: true,
+        stickers: true,
         colorful: true
     }
 };
@@ -14,7 +14,6 @@ const item2 = {
     image: 'wand',
     keywords: {
         wand: true,
-        kid: true
     }
 };
 

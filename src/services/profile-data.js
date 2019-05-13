@@ -8,7 +8,7 @@ const profile1 = {
     image: 'Alex',
     keywords: {
         stickers: 'I like the colors.',
-        harryPotter: 'It is my favorite movie.',
+        kid: 'I am a giant kid.',
     }
 };
 
