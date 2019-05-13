@@ -11,4 +11,20 @@ const profile1 = {
         harryPotter: 'It is my favorite movie.',
     }
 };
-export default profile1;
+
+const profile2 = {
+    id: 2,
+    name: '2',
+    bio: `
+        Stuff.
+    `,
+    image: 'Alex.jpg',
+    keywords: {
+        stickers: 'I like the colors.',
+        harryPotter: 'It is my favorite movie.',
+    }
+};
+
+const profileArray = [profile1, profile2];
+
+export default profileArray;
