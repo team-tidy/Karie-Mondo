@@ -5,7 +5,7 @@ const profile1 = {
         My name is Alex. I am a giant kid in a grown-up body. I like colors!
         I do not like clutter.
     `,
-    image: 'Alex.jpg',
+    image: 'Alex',
     keywords: {
         stickers: 'I like the colors.',
         harryPotter: 'It is my favorite movie.',
@@ -18,7 +18,7 @@ const profile2 = {
     bio: `
         Stuff.
     `,
-    image: 'Alex.jpg',
+    image: 'Alex',
     keywords: {
         stickers: 'I like the colors.',
         harryPotter: 'It is my favorite movie.',
