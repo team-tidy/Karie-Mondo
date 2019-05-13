@@ -1,7 +1,7 @@
 const item1 = {
     id: 1,
     name: 'Sticker Book',
-    image: 'stick.jpg',
+    image: 'stick',
     keywords: {
         sticker: true,
         colorful: true
