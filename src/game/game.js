@@ -19,6 +19,7 @@ function loadItem(itemCounter) {
     itemImage.src = './assets/items/' + itemArray[itemCounter].image + '.jpg';
 }
 
+// we will need to include some of the following lines below into an updateScore function, update user score from the DOM
 const user = api.getUser();
 const profile = api.getProfile(user.id);
 
@@ -32,9 +33,10 @@ choiceForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(choiceForm);
     const choiceId = formData.get('choices');
+    // These following lines will help to determine score
     // if user chose keep and match is true
     if(choiceId === 'sparks-joy' && matchMaker(itemArray[itemCounter], profile)) {
-        console.log('keep-match');
+        
     }
     // if user chose keep and match is false
     else if(choiceId === 'sparks-joy' && !matchMaker(itemArray[itemCounter], profile)) { 
@@ -48,9 +50,13 @@ choiceForm.addEventListener('submit', (event) => {
     else if(choiceId === 'thank-you' && !matchMaker(itemArray[itemCounter], profile)) {
         console.log('no-keep-no-match');
     }
-    itemCounter++;
+    // these two lines will help go to the next item
+    itemCounter++; 
     loadItem(itemCounter);
+    // still need to save items into two arrays 'spark' and 'thank'
+    // still need to redirect to end page when finished with item array
 });
+    
 
 
 
