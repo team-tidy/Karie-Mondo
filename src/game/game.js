@@ -1,6 +1,7 @@
 import itemArray from '../services/item-data.js';
 import api from '../services/api.js';
 import matchMaker from '../game/match-maker.js';
+import updateUserScore from './update-user-score.js';
 
 const itemImage = document.getElementById('item-image');
 const itemName = document.getElementById('item-name');
@@ -12,6 +13,7 @@ const score = document.getElementById('score');
 // this is our counter variable mentioned below
 // Kate proposed to use a variable as a counter and increment it to look through the itemArray after clicking
 let itemCounter = 0;
+const scoreToAdd = 1;
 
 // will move this LATER!
 function loadItem(itemCounter) {
@@ -36,7 +38,8 @@ choiceForm.addEventListener('submit', (event) => {
     // These following lines will help to determine score
     // if user chose keep and match is true
     if(choiceId === 'sparks-joy' && matchMaker(itemArray[itemCounter], profile)) {
-        
+        const updatedUser = updateUserScore(user, scoreToAdd);
+        api.saveUser(updatedUser);
     }
     // if user chose keep and match is false
     else if(choiceId === 'sparks-joy' && !matchMaker(itemArray[itemCounter], profile)) { 
@@ -44,7 +47,8 @@ choiceForm.addEventListener('submit', (event) => {
     }
     // if user chose thank-you and match is true
     else if(choiceId === 'thank-you' && matchMaker(itemArray[itemCounter], profile)) {
-        console.log('no-keep-match');
+        const updatedUser = updateUserScore(user, scoreToAdd);
+        api.saveUser(updatedUser);
     } 
     // if user chose thank-you and match is false
     else if(choiceId === 'thank-you' && !matchMaker(itemArray[itemCounter], profile)) {
