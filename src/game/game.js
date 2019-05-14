@@ -12,6 +12,8 @@ const choiceForm = document.getElementById('choice-form');
 // our counter variable below is tracking itemArray index
 let itemCounter = 0;
 const scoreToAdd = 1;
+const sparkArray = [];
+const thankYouArray = [];
 
 // we will need to include some of the following lines below into an updateScore function, update user score from the DOM
 const user = api.getUser();
@@ -27,6 +29,14 @@ choiceForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(choiceForm);
     const choiceId = formData.get('choices');
+    if(choiceId === 'sparks-joy') {
+        sparkArray.push(itemArray[itemCounter]);
+        
+    }
+    else if(choiceId === 'thank-you') {
+        thankYouArray.push(itemArray[itemCounter]);
+        console.log(thankYouArray);
+    }
     // These following lines will help to determine score
     const match = matchMaker(itemArray[itemCounter], profile);
     // if user chose keep and match is true
@@ -54,8 +64,3 @@ choiceForm.addEventListener('submit', (event) => {
     // still need to save items into two arrays 'spark' and 'thank'
     // still need to redirect to end page when finished with item array
 });
-    
-
-
-
-
