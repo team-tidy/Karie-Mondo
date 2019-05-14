@@ -2,13 +2,14 @@ import itemArray from '../services/item-data.js';
 import api from '../services/api.js';
 import matchMaker from '../game/match-maker.js';
 import updateUserScore from './update-user-score.js';
+import loadUpdatedScore from '../load-updated-score.js';
 
 const itemImage = document.getElementById('item-image');
 const itemName = document.getElementById('item-name');
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
-const score = document.getElementById('score');
+
 
 // this is our counter variable mentioned below
 // Kate proposed to use a variable as a counter and increment it to look through the itemArray after clicking
@@ -27,9 +28,10 @@ const profile = api.getProfile(user.id);
 
 avatarImage.src = './assets/' + profile.image + '.jpg';
 avatarName.textContent = profile.name;
-score.textContent = user.score;
+    
 
 loadItem(itemCounter);
+loadUpdatedScore();
 
 choiceForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -57,6 +59,7 @@ choiceForm.addEventListener('submit', (event) => {
     // these two lines will help go to the next item
     itemCounter++; 
     loadItem(itemCounter);
+    loadUpdatedScore();
     // still need to save items into two arrays 'spark' and 'thank'
     // still need to redirect to end page when finished with item array
 });
