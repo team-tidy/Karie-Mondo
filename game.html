@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/game/game.css">
+    <title>game page</title>
+</head>
+<body>
+    <header>
+        <section></section>
+        <h1 id="title">Karie Mondo Game</h1>
+        <section id="user-profile">
+            <span id="avatar-image">
+                <img id ="pic" src="" alt="photo of me">
+            </span>
+            <span id="avatar-name"></span>
+            <span>Score: <span id="score">0</span></span>
+        </section>
+    </header>
+    <main>
+        <p>Does this item spark joy? Or is it clutter?</p>
+        <img id="item-image" alt="item-image">
+        <p id="item-name"></p>
+        <form id="choice-form">
+            <fieldset id="radio-buttons">
+                <legend>
+                Would this item spark joy for Alex?
+                </legend>
+                <div>
+                    <input name="choices" value="sparks-joy" type="radio" id="sparks-joy">
+                    <label for="spark-joy">Sparks Joy!</label>
+                </div>
+                <div>
+                    <input name="choices" value="thank-you" type="radio" id="thank-you">
+                    <label for="thank-you">Thank you, next.</label>
+                </div>
+                <div>
+                    <button id="submit-button">Make Your Choice!</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <script type="module" src="./src/game/game.js"></script>
+</body>
+</html>
