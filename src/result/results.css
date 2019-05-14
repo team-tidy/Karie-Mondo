@@ -1,3 +1,10 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+}
+
 header {
     margin: 0;
     display: grid;
@@ -28,4 +35,23 @@ span {
 
 #score {
     display: inline;
+}
+
+hr {
+    color: rgb(77, 77, 77);
+    width: 700px;
+    color: rgb(77, 77, 77);
+    border: solid 1px;
+}
+
+#messages {
+    background-color: rgba(97, 97, 97, 0.563);
+    text-align: center;
+    padding: 20px 5px 8px 5px;
+    color: white;
+    width: 300px;
+    margin-left: 280px;
+    margin-top: 40px;
+    position: fixed;
+
 }

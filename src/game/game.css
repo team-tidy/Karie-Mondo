@@ -1,3 +1,10 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+}
+
 header {
     margin: 0;
     display: grid;
@@ -28,4 +35,24 @@ span {
 
 #score {
     display: inline;
+}
+
+hr {
+    color: rgb(77, 77, 77);
+    width: 700px;
+    color: rgb(77, 77, 77);
+    border: solid 1px;
+}
+
+button {
+    background-color: rgba(218, 245, 213, 0.522);
+    border: solid 1px rgb(106, 106, 106);
+    color: rgb(60, 60, 60);
+    font-size: 1em;
+    font-family: 'Belleza', sans-serif;
+    margin: 3px 5px 5px 5px;
+}
+
+button:hover {
+    background-color: rgba(168, 247, 155, 0.522);
 }
