@@ -19,7 +19,7 @@ const thankYouArray = [];
 const user = api.getUser();
 const profile = api.getProfile(user.id);
 
-avatarImage.src = '../assets/' + profile.image + '.jpg';
+avatarImage.src = './assets/' + profile.image + '.jpg';
 avatarName.textContent = profile.name;
 
 loadItem(itemCounter);
