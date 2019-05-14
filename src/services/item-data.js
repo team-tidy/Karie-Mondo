@@ -1,26 +1,134 @@
-const item1 = {
+const bearHat = {
     id: 1,
-    name: 'Sticker Book',
-    image: 'stick',
+    name: 'Bear Hat',
+    image: 'bear-hat',
     keywords: {
-        stickers: true,
+        hat: true,
+        bear: true
+    }
+};
+
+const teddyBear = {
+    id: 2,
+    name: 'Teddy Bear',
+    image: 'teddy-bear',
+    keywords: {
+        bear: true,
+    }
+};
+
+const microphone = {
+    id: 3,
+    name: 'Microphone',
+    image: 'microphone',
+    keywords: {
+        microphone: true
+    }
+};
+
+const colorfulHat = {
+    id: 4,
+    name: 'Colorful Hat',
+    image: 'colorful-hat',
+    keywords: {
+        hat: true
+    }
+};
+
+const thailandHat = {
+    id: 5,
+    name: 'Thailand Hat',
+    image: 'thailand-hat',
+    keywords: {
+        hat: true
+    }
+};
+
+const netherlandsPic = {
+    id: 6,
+    name: 'Netherlands Picture',
+    image: 'netherlands-pic',
+    keywords: {
+        netherlands: true
+    }
+};
+
+const washiTape = {
+    id: 7,
+    name: 'Washi Tape',
+    image: 'washi-tape',
+    keywords: {
+        artsy: true
+    }
+};
+
+const marbles = {
+    id: 8,
+    name: 'Marbles',
+    image: 'marbles',
+    keywords: {
+        marbles: true
+    }
+};
+
+const pig = {
+    id: 9,
+    name: 'Pig',
+    image: 'pig',
+    keywords: {
+        cute: true
+    }
+};
+
+const clarinetReeds = {
+    id: 10,
+    name: 'Clarinet Reeds',
+    image: 'clarinet-reeds',
+    keywords: {
+        clarinet: true
+    }
+};
+
+const disneyShirt = {
+    id: 11,
+    name: 'Disney Shirt',
+    image: 'disney-shirt',
+    keywords: {
         colorful: true
     }
 };
 
-const item2 = {
-    id: 2,
-    name: 'Magic Wand',
-    image: 'wand',
+const fishEarrings = {
+    id: 12,
+    name: 'Fish Earrings',
+    image: 'fish-earrings',
     keywords: {
-        wand: true,
+        colorful: true
     }
 };
 
-const item3 = {
-    id: 3,
-    name: 'Mickey Watch',
-    image: 'watch',
+const lionKing = {
+    id: 13,
+    name: 'Lion King Toy',
+    image: 'lion-king',
+    keywords: {
+        kid: true
+    }
+};
+
+const shelSilverstein = {
+    id: 14,
+    name: 'Shel Silverstein Book',
+    image: 'shel-silverstein',
+    keywords: {
+        kid: true
+    }
+};
+
+const wand = {
+    id: 15,
+    name: 'Wand',
+    image: 'wand',
     keywords: {
         kid: true
     }
@@ -34,6 +142,6 @@ function shuffle(array) {
     return array;
 }
 
-const itemArray = [item1, item2, item3];
+const itemArray = [bearHat, teddyBear, microphone, colorfulHat, thailandHat, netherlandsPic, washiTape, marbles, pig, clarinetReeds, disneyShirt, fishEarrings, lionKing, shelSilverstein, wand];
 const result = shuffle(itemArray);
 export default result;
