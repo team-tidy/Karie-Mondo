@@ -31,11 +31,9 @@ choiceForm.addEventListener('submit', (event) => {
     const choiceId = formData.get('choices');
     if(choiceId === 'sparks-joy') {
         sparkArray.push(itemArray[itemCounter]);
-        
     }
     else if(choiceId === 'thank-you') {
         thankYouArray.push(itemArray[itemCounter]);
-        console.log(thankYouArray);
     }
     // These following lines will help to determine score
     const match = matchMaker(itemArray[itemCounter], profile);
@@ -59,6 +57,10 @@ choiceForm.addEventListener('submit', (event) => {
     }
     // these two lines will help go to the next item
     itemCounter++; 
+    if(itemArray[itemCounter] === undefined) {
+        api.saveSortedItems(sparkArray, thankYouArray);
+        window.location = './results.html';
+    }
     loadUpdatedScore();
     loadItem(itemCounter);
     // still need to save items into two arrays 'spark' and 'thank'
