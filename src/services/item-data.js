@@ -26,5 +26,14 @@ const item3 = {
     }
 };
 
+function shuffle(array) {
+    for(let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+        [array[i], array[j]] = [array[j], array[i]]; // swap elements
+    }
+    return array;
+}
+
 const itemArray = [item1, item2, item3];
-export default itemArray;
+const result = shuffle(itemArray);
+export default result;
