@@ -1,6 +1,6 @@
 import itemArray from '../services/item-data.js';
 import api from '../services/api.js';
-import matchMaker from '../game/matchMaker.js';
+import matchMaker from '../game/match-maker.js';
 
 const itemImage = document.getElementById('item-image');
 const itemName = document.getElementById('item-name');

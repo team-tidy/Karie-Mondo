@@ -1,4 +1,4 @@
-import matchMaker from '../src/game/matchMaker.js';
+import matchMaker from '../src/game/match-maker.js';
 
 const test = QUnit.test;
 
