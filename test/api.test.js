@@ -32,3 +32,19 @@ test('get profile by id', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('round trip of sortedItems object', assert => {
+    // arrange
+    const sparkArray = [{ id: 1 }];
+    const thankYouArray = [{ id: 2 }];
+
+    const expected = {
+        sparkArray: sparkArray,
+        thankYouArray: thankYouArray
+    };
+    // act
+    api.saveSortedItems(sparkArray, thankYouArray);
+    const result = api.getSortedItems();
+    // assert
+    assert.deepEqual(result, expected);
+});

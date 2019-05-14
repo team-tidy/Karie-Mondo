@@ -18,6 +18,19 @@ const api = {
                 return profile;
             }
         }
+    },
+    saveSortedItems(sparkArray, thankYouArray) {
+        const sortedItems = {
+            sparkArray: sparkArray,
+            thankYouArray: thankYouArray
+        };
+        const json = JSON.stringify(sortedItems);
+        api.storage.setItem('sortedItems', json);
+    },
+    getSortedItems() {
+        const json = api.storage.getItem('sortedItems');
+        const sortedItems = JSON.parse(json);
+        return sortedItems;
     }
 };
 
