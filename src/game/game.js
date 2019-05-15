@@ -8,6 +8,7 @@ import loadItem from '../game/load-item.js';
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
+const plusOne = document.getElementById('plusOne');
 
 let itemCounter = 0;
 const scoreToAdd = 1;
@@ -39,6 +40,12 @@ choiceForm.addEventListener('submit', (event) => {
     if(choiceId === 'sparks-joy' && match) {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
+        plusOne.classList.add('elementToFadeOut');
+        choiceForm.setAttribute('disabled', 'true');
+        setTimeout(function(){
+            choiceForm.removeAttribute('disabled');
+            plusOne.classList.remove('elementToFadeOut');
+        }, 2000);
     }
     // if user chose keep and match is false
     else if(choiceId === 'sparks-joy' && !match) { 
@@ -52,6 +59,12 @@ choiceForm.addEventListener('submit', (event) => {
     else if(choiceId === 'thank-you' && !match) {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
+        plusOne.classList.add('elementToFadeOut');
+        choiceForm.setAttribute('disabled', 'true');
+        setTimeout(function(){
+            choiceForm.removeAttribute('disabled');
+            plusOne.classList.remove('elementToFadeOut');
+        }, 2000);
     }
     // these two lines will help go to the next item
     itemCounter++; 
