@@ -142,6 +142,8 @@ function shuffle(array) {
     return array;
 }
 
-const itemArray = [bearHat, teddyBear, microphone, colorfulHat, thailandHat, netherlandsPic, washiTape, marbles, pig, clarinetReeds, disneyShirt, fishEarrings, lionKing, shelSilverstein, wand];
+const itemArray = [bearHat, teddyBear, microphone, colorfulHat, thailandHat, netherlandsPic, 
+    washiTape, marbles, pig, clarinetReeds, disneyShirt, fishEarrings, lionKing, shelSilverstein, 
+    wand];
 const result = shuffle(itemArray);
 export default result;
