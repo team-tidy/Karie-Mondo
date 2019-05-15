@@ -1,9 +1,7 @@
 import makeUser from './make-user.js';
 import api from '../services/api.js';
 
-
 const characterForm = document.getElementById('character-form');
-
 
 characterForm.addEventListener('submit', (event) => {
     event.preventDefault();

@@ -4,12 +4,12 @@ import matchMaker from '../game/match-maker.js';
 import updateUserScore from './update-user-score.js';
 import loadUpdatedScore from '../load-updated-score.js';
 import loadItem from '../game/load-item.js';
+import animateScore from '../game/animate-score.js';
+import isGuessCorrect from '../game/is-guess-correct.js';
 
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
-const submitButton = document.getElementById('submit-button');
-const plusOne = document.getElementById('plusOne');
 
 let itemCounter = 0;
 const scoreToAdd = 1;
@@ -35,39 +35,19 @@ choiceForm.addEventListener('submit', (event) => {
     else if(choiceId === 'thank-you') {
         thankYouArray.push(itemArray[itemCounter]);
     }
-    // These following lines will help to determine score
+
     const match = matchMaker(itemArray[itemCounter], profile);
-    // if user chose keep and match is true
-    if(choiceId === 'sparks-joy' && match) {
+    const correctGuess = isGuessCorrect(choiceId, match);
+
+    if(correctGuess) {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
-        plusOne.classList.add('elementToFadeOut');
-        submitButton.setAttribute('disabled', 'true');
-        setTimeout(function(){
-            submitButton.removeAttribute('disabled');
-            plusOne.classList.remove('elementToFadeOut');
-        }, 2000);
+        animateScore(1);
     }
-    // if user chose keep and match is false
-    else if(choiceId === 'sparks-joy' && !match) { 
-        console.log('keep-no-match');
+    else {
+        animateScore(0);
     }
-    // if user chose thank-you and match is true
-    else if(choiceId === 'thank-you' && match) {
-        console.log('thank-match');
-    } 
-    // if user chose thank-you and match is false
-    else if(choiceId === 'thank-you' && !match) {
-        const updatedUser = updateUserScore(user, scoreToAdd);
-        api.saveUser(updatedUser);
-        plusOne.classList.add('elementToFadeOut');
-        submitButton.setAttribute('disabled', 'true');
-        setTimeout(function(){
-            submitButton.removeAttribute('disabled');
-            plusOne.classList.remove('elementToFadeOut');
-        }, 2000);
-    }
-    // these two lines will help go to the next item
+
     itemCounter++; 
     if(itemArray[itemCounter] === undefined) {
         api.saveSortedItems(sparkArray, thankYouArray);
@@ -76,3 +56,4 @@ choiceForm.addEventListener('submit', (event) => {
     loadUpdatedScore();
     loadItem(itemCounter);
 });
+

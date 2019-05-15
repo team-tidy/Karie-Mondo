@@ -1,11 +1,12 @@
 import finalScoreMessage from '../src/result/final-score-message.js';
+
 const test = QUnit.test;
 
 QUnit.module('final-score-message');
 
 test('spit out lost message', (assert) => {
     // arrange
-    const score = 5;
+    const score = 0;
     const resultDictionary = { win: 'You Won!', okay: 'You did okay', lost: 'You lost' };
     const itemArrayLength = 15;
     const expected = 'You lost';
@@ -29,7 +30,7 @@ test('spit out okay message', (assert) => {
 
 test('spit out win message', (assert) => {
     // arrange
-    const score = 11;
+    const score = 15;
     const resultDictionary = { win: 'You Won!', okay: 'You did okay', lost: 'You lost' };
     const itemArrayLength = 15;
     const expected = 'You Won!';
