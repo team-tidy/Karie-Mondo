@@ -47,11 +47,34 @@ hr {
 #messages {
     background-color: rgba(97, 97, 97, 0.563);
     text-align: center;
+    text-shadow: 1px 1px 1px black;
     padding: 20px 5px 8px 5px;
     color: white;
     width: 300px;
-    margin-left: 280px;
-    margin-top: 40px;
-    position: fixed;
+    margin: auto;
+}
 
+#play-again-button {
+    display: block;
+    margin: 20px auto 15px auto ;
+    /* margin-top: 30px; */
+}
+
+a {
+    font-size: .8em;
+    color: rgb(218, 245, 213);
+    text-shadow: 1px 1px 1px black;
+}
+
+button {
+    background-color: rgba(218, 245, 213, 0.522);
+    border: solid 1px rgb(106, 106, 106);
+    color: rgb(60, 60, 60);
+    font-size: 1em;
+    font-family: 'Belleza', sans-serif;
+    margin: 3px 5px 5px 5px;
+}
+
+button:hover {
+    background-color: rgba(168, 247, 155, 0.522);
 }

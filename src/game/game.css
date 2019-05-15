@@ -44,6 +44,11 @@ hr {
     border: solid 1px;
 }
 
+#item-image {
+    width: auto;
+    height: 250px;
+}
+
 button {
     background-color: rgba(218, 245, 213, 0.522);
     border: solid 1px rgb(106, 106, 106);
