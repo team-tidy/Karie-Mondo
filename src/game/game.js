@@ -22,6 +22,8 @@ const profile = api.getProfile(user.id);
 avatarImage.src = './assets/' + profile.image + '.jpg';
 avatarName.textContent = profile.name;
 
+console.log('pre-shuffle', itemArray);
+
 loadItem(itemCounter);
 loadUpdatedScore();
 
@@ -31,6 +33,8 @@ choiceForm.addEventListener('submit', (event) => {
     const choiceId = formData.get('choices');
     if(choiceId === 'sparks-joy') {
         sparkArray.push(itemArray[itemCounter]);
+        // To do
+        // itemArray.splice(itemArray[itemCounter], 1);
     }
     else if(choiceId === 'thank-you') {
         thankYouArray.push(itemArray[itemCounter]);

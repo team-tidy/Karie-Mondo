@@ -1,30 +1,37 @@
-const profile1 = {
+const alex = {
     id: 1,
     name: 'Alex',
-    bio: `
-        My name is Alex. I am a giant kid in a grown-up body. I like colors!
-        I do not like clutter.
-    `,
     image: 'Alex',
     keywords: {
-        stickers: 'I like the colors.',
-        kid: 'I am a giant kid.',
+        colorful: 'I like the colors.',
+        kid: 'I am a giant kid.'
     }
 };
 
-const profile2 = {
+const erin = {
     id: 2,
     name: '2',
-    bio: `
-        Stuff.
-    `,
     image: 'Alex',
     keywords: {
-        stickers: 'I like the colors.',
-        harryPotter: 'It is my favorite movie.',
+        hat: 'I like the hats.',
+        bear: 'I like the bears.',
+        microphone: 'I needs to make my voice louder.'
     }
 };
 
-const profileArray = [profile1, profile2];
+const susan = {
+    id: 2,
+    name: '2',
+    image: 'Alex',
+    keywords: {
+        netherlands: 'I liked living there.',
+        clarinet: 'I like playing it.',
+        cute: 'I like cute things.',
+        artsy: 'I like artsy crafts.',
+        marbles: 'I like looking at them.'
+    }
+};
+
+const profileArray = [alex, erin, susan];
 
 export default profileArray;

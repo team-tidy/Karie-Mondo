@@ -7,6 +7,11 @@ const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const finalMessageDom = document.getElementById('final-message');
 const finalScore = document.getElementById('final-score');
+const playAgainButton = document.getElementById('play-again-button');
+
+playAgainButton.addEventListener('click', () => {
+    window.location = './';
+});
 
 const user = api.getUser();
 const profile = api.getProfile(user.id);
