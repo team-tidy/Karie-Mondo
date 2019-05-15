@@ -14,46 +14,48 @@
         <h3>Select your character and read their clues closely!</h3>
     </header>
     <main>
-        <fieldset>
-        <section id="grid-container">
-        <section>
-            <img src="./assets/Alex.jpg" alt="picture of Alex">
-            <section class="radio-container">
-                <input name="character" value="Alex" type="radio" id="Alex">
-                <label for="Alex">Alex</label>
-            </section>
-            <p>My name is Alex. I am a giant kid in a grown-up body. I used to be a singer. 
-                I like bright colors! I have a hard time letting go of childhood, but I love 
-                being tidy! Please help me clean up my space.
-            </p>
-        </section>
-        <section>
-            <img src="./assets/Alex.jpg" alt="picture of Alex">
-            <section class="radio-container">
-                <input name="character" value="Erin" type="radio" id="Erin">
-                <label for="Erin">Erin</label>
-            </section>
-            <p>Hi, my name is Erin. One time I was hired to stand on top of a table and yell poetry
-                at a party while dressed as the Mad Hatter. I have a fondness for learning about 
-                different cultures and a certain furry mammal. I strive for minimalism but certainly 
-                hold onto a few sentimental items.
-            </p>
-        </section>
-        <section>
-            <img src="./assets/Alex.jpg" alt="picture of Alex">
-            <section class="radio-container">
-                <input name="character" value="Susan" type="radio" id="Susan">
-                <label for="Susan">Susan</label>
-            </section>
-            <p>My name is Susan. I love music, slow-moving animals, and tiny cute things. I enjoyed 
-                living abroad for three years. Help me tidy!
-            </p>
-        </section>
-        </section>
-        <div>
-            <button id="play-button">Play Game!</button>
-        </div>       
-        </fieldset>
+        <form id="character-form">
+            <fieldset>
+                <section id="grid-container">
+                    <section>
+                        <img src="./assets/Alex.jpg" alt="picture of Alex">
+                        <section class="radio-container">
+                            <input name="character" value="1" type="radio" id="Alex">
+                            <label for="Alex">Alex</label>
+                        </section>
+                        <p>My name is Alex. I am a giant kid in a grown-up body. I used to be a singer. 
+                            I like bright colors! I have a hard time letting go of childhood, but I love 
+                            being tidy! Please help me clean up my space.
+                        </p>
+                    </section>
+                    <section>
+                        <img src="./assets/Alex.jpg" alt="picture of Alex">
+                        <section class="radio-container">
+                            <input name="character" value="2" type="radio" id="Erin">
+                            <label for="Erin">Erin</label>
+                        </section>
+                        <p>Hi, my name is Erin. One time I was hired to stand on top of a table and yell poetry
+                            at a party while dressed as the Mad Hatter. I have a fondness for learning about 
+                            different cultures and a certain furry mammal. I strive for minimalism but certainly 
+                            hold onto a few sentimental items.
+                        </p>
+                    </section>
+                    <section>
+                        <img src="./assets/Alex.jpg" alt="picture of Alex">
+                        <section class="radio-container">
+                            <input name="character" value="3" type="radio" id="Susan">
+                            <label for="Susan">Susan</label>
+                        </section>
+                        <p>My name is Susan. I love music, slow-moving animals, and tiny cute things. I enjoyed 
+                            living abroad for three years. Help me tidy!
+                        </p>
+                    </section>
+                </section>    
+            </fieldset>
+            <div>
+                <button>Play Game!</button>
+            </div> 
+        </form>
     </main>
     <script type="module" src="src/intro/index.js"></script>
 </body>

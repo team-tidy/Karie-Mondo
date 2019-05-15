@@ -1,6 +1,6 @@
-function makeUser() {
+function makeUser(characterId) {
     const user = {
-        id: 1,
+        id: characterId,
         score: 0
     };
     return user;  
