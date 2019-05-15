@@ -67,3 +67,27 @@ button:hover {
 fieldset {
     border: none;
 }
+
+.elementToFadeOut {
+    animation-name: scoreAction;
+    animation-duration: 4s;
+    opacity: 0;
+  }
+  
+  @keyframes scoreAction {
+    0%  { opacity: 1 }
+    100% { opacity: 0 }
+  }
+  @-o-keyframes scoreAction{
+    0%  { opacity: 1 }
+    100% { opacity: 0 }
+  }
+  @-moz-keyframes scoreAction{
+    0%  { opacity: 1 }
+    100% { opacity: 0 }
+  }
+  @-webkit-keyframes scoreAction{
+    0%  { opacity: 1 }
+    100% { opacity: 0 }
+  }   
+  

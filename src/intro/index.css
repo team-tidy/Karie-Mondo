@@ -29,17 +29,37 @@ img {
 
 #grid-container {
     display: grid;
-    padding-left: 8%;
-    padding-right: 8%;
     grid-template-columns:1fr 1fr 1fr;
     text-align: center;
+    column-gap: 5px;
+}
+
+#alex {
+    background-color: rgba(97, 97, 97, 0.231);
+    padding: 3px 3px 3px 3px;
+    border: solid 2px rgb(79, 79, 79);
+    border-radius: 10%;
+}
+
+#erin {
+    background-color: rgba(255, 255, 255, 0.327);
+    padding: 3px 3px 3px 3px;
+    border: solid 2px rgb(79, 79, 79);
+    border-radius: 10%;
+}
+
+#susan {
+    background-color: #bad6f767;
+    padding: 3px 3px 3px 3px;
+    border: solid 2px rgb(79, 79, 79);
+    border-radius: 10%;
 }
 
 button {
-    background-color: rgba(218, 245, 213, 0.522);
+    background-color: rgba(218, 245, 213, 0.676);
     border: solid 1px rgb(106, 106, 106);
     color: rgb(60, 60, 60);
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Belleza', sans-serif;
     margin: 3px 5px 5px 5px;
 }
