@@ -69,9 +69,13 @@ fieldset {
 }
 
 #plusOne {
-width: 100px;
-height: 100px;
-opacity: 0;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    margin: auto;
+    font-size: 3em;
+    border: 2px solid black;
+    border-radius: 100%;
 }
 
 .elementToFadeOut {

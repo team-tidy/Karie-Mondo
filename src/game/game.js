@@ -8,6 +8,7 @@ import loadItem from '../game/load-item.js';
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
+const submitButton = document.getElementById('submit-button');
 const plusOne = document.getElementById('plusOne');
 
 let itemCounter = 0;
@@ -41,9 +42,9 @@ choiceForm.addEventListener('submit', (event) => {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
         plusOne.classList.add('elementToFadeOut');
-        choiceForm.setAttribute('disabled', 'true');
+        submitButton.setAttribute('disabled', 'true');
         setTimeout(function(){
-            choiceForm.removeAttribute('disabled');
+            submitButton.removeAttribute('disabled');
             plusOne.classList.remove('elementToFadeOut');
         }, 2000);
     }
@@ -60,9 +61,9 @@ choiceForm.addEventListener('submit', (event) => {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
         plusOne.classList.add('elementToFadeOut');
-        choiceForm.setAttribute('disabled', 'true');
+        submitButton.setAttribute('disabled', 'true');
         setTimeout(function(){
-            choiceForm.removeAttribute('disabled');
+            submitButton.removeAttribute('disabled');
             plusOne.classList.remove('elementToFadeOut');
         }, 2000);
     }
