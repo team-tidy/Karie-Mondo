@@ -5,6 +5,7 @@ import updateUserScore from './update-user-score.js';
 import loadUpdatedScore from '../load-updated-score.js';
 import loadItem from '../game/load-item.js';
 import animateScore from '../game/animate-score.js';
+import isGuessCorrect from '../game/is-guess-correct.js';
 
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
@@ -34,29 +35,19 @@ choiceForm.addEventListener('submit', (event) => {
     else if(choiceId === 'thank-you') {
         thankYouArray.push(itemArray[itemCounter]);
     }
-    // These following lines will help to determine score
+
     const match = matchMaker(itemArray[itemCounter], profile);
-    // if user chose keep and match is true
-    if(choiceId === 'sparks-joy' && match) {
+    const correctGuess = isGuessCorrect(choiceId, match);
+
+    if(correctGuess) {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
         animateScore(1);
     }
-    // if user chose keep and match is false
-    else if(choiceId === 'sparks-joy' && !match) { 
+    else {
         animateScore(0);
     }
-    // if user chose thank-you and match is true
-    else if(choiceId === 'thank-you' && match) {
-        animateScore(0);
-    } 
-    // if user chose thank-you and match is false
-    else if(choiceId === 'thank-you' && !match) {
-        const updatedUser = updateUserScore(user, scoreToAdd);
-        api.saveUser(updatedUser);
-        animateScore(1);
-    }
-    // these two lines will help go to the next item
+
     itemCounter++; 
     if(itemArray[itemCounter] === undefined) {
         api.saveSortedItems(sparkArray, thankYouArray);
