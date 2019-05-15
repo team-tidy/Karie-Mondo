@@ -2,6 +2,7 @@ import api from '../services/api.js';
 import loadUpdatedScore from '../load-updated-score.js';
 import resultsDictionary from '../services/results-dictionary.js';
 import finalScoreMessage from '../result/final-score-message.js';
+import itemArray from '../services/item-data.js';
 
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
@@ -20,7 +21,7 @@ loadUpdatedScore();
 avatarImage.src = './assets/' + profile.image + '.jpg';
 avatarName.textContent = profile.name;
 
-const finalMessage = finalScoreMessage(user.score, resultsDictionary);
+const finalMessage = finalScoreMessage(user.score, resultsDictionary, itemArray.length);
 finalMessageDom.textContent = finalMessage;
 
 const finalScoreString = 'You scored ' + user.score + ' points!';

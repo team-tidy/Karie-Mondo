@@ -1,12 +1,14 @@
-function finalScoreMessage(score, resultDictionary) {
-    if(score === 0) {
+function finalScoreMessage(score, resultDictionary, itemArrayLength) {
+    if(score <= itemArrayLength * (1 / 3)) {
         return resultDictionary.lost;
     } 
-    else if(score === 1 || score === 2) {
+    else if(score <= itemArrayLength * (2 / 3)) {
         return resultDictionary.okay;
     }
-    else if(score === 3) {
+    else if(score > itemArrayLength * (2 / 3) && score <= itemArrayLength) {
         return resultDictionary.win;
     }
 }
+
 export default finalScoreMessage;
+
