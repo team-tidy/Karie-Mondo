@@ -9,20 +9,16 @@ const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
 
-// our counter variable below is tracking itemArray index
 let itemCounter = 0;
 const scoreToAdd = 1;
 const sparkArray = [];
 const thankYouArray = [];
 
-// we will need to include some of the following lines below into an updateScore function, update user score from the DOM
 const user = api.getUser();
 const profile = api.getProfile(user.id);
 
 avatarImage.src = './assets/' + profile.image + '.jpg';
 avatarName.textContent = profile.name;
-
-console.log('pre-shuffle', itemArray);
 
 loadItem(itemCounter);
 loadUpdatedScore();
@@ -33,8 +29,6 @@ choiceForm.addEventListener('submit', (event) => {
     const choiceId = formData.get('choices');
     if(choiceId === 'sparks-joy') {
         sparkArray.push(itemArray[itemCounter]);
-        // To do
-        // itemArray.splice(itemArray[itemCounter], 1);
     }
     else if(choiceId === 'thank-you') {
         thankYouArray.push(itemArray[itemCounter]);
@@ -67,6 +61,4 @@ choiceForm.addEventListener('submit', (event) => {
     }
     loadUpdatedScore();
     loadItem(itemCounter);
-    // still need to save items into two arrays 'spark' and 'thank'
-    // still need to redirect to end page when finished with item array
 });
