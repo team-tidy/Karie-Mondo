@@ -48,6 +48,7 @@ hr {
 #item-image {
     width: auto;
     height: 250px;
+    border-radius: 10%;
 }
 
 button {
@@ -61,4 +62,12 @@ button {
 
 button:hover {
     background-color: rgba(168, 247, 155, 0.522);
+}
+
+span {
+    display: inline;
+}
+
+fieldset {
+    border: none;
 }
