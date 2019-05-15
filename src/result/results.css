@@ -29,7 +29,7 @@ span {
 #pic {
     width: 50px;
     height: auto;
-    border-radius: 100%;
+    border-radius: 10%;
     border: solid 2px rgb(79, 79, 79);
     vertical-align: middle;
 }

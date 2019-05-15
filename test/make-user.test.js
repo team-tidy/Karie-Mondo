@@ -7,11 +7,12 @@ QUnit.module('make-user');
 test('create user object from profile id', (assert) => {
     // arrange
     const user = {
-        id: 1,
+        id: 2,
         score: 0
     };
+    const characterId = 2;
     // act
-    const result = makeUser();
+    const result = makeUser(characterId);
     // assert
     assert.deepEqual(result, user);
 });

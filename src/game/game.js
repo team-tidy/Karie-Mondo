@@ -8,21 +8,19 @@ import loadItem from '../game/load-item.js';
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
+const submitButton = document.getElementById('submit-button');
+const plusOne = document.getElementById('plusOne');
 
-// our counter variable below is tracking itemArray index
 let itemCounter = 0;
 const scoreToAdd = 1;
 const sparkArray = [];
 const thankYouArray = [];
 
-// we will need to include some of the following lines below into an updateScore function, update user score from the DOM
 const user = api.getUser();
 const profile = api.getProfile(user.id);
 
 avatarImage.src = './assets/' + profile.image + '.jpg';
 avatarName.textContent = profile.name;
-
-console.log('pre-shuffle', itemArray);
 
 loadItem(itemCounter);
 loadUpdatedScore();
@@ -33,8 +31,6 @@ choiceForm.addEventListener('submit', (event) => {
     const choiceId = formData.get('choices');
     if(choiceId === 'sparks-joy') {
         sparkArray.push(itemArray[itemCounter]);
-        // To do
-        // itemArray.splice(itemArray[itemCounter], 1);
     }
     else if(choiceId === 'thank-you') {
         thankYouArray.push(itemArray[itemCounter]);
@@ -45,6 +41,12 @@ choiceForm.addEventListener('submit', (event) => {
     if(choiceId === 'sparks-joy' && match) {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
+        plusOne.classList.add('elementToFadeOut');
+        submitButton.setAttribute('disabled', 'true');
+        setTimeout(function(){
+            submitButton.removeAttribute('disabled');
+            plusOne.classList.remove('elementToFadeOut');
+        }, 2000);
     }
     // if user chose keep and match is false
     else if(choiceId === 'sparks-joy' && !match) { 
@@ -58,6 +60,12 @@ choiceForm.addEventListener('submit', (event) => {
     else if(choiceId === 'thank-you' && !match) {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
+        plusOne.classList.add('elementToFadeOut');
+        submitButton.setAttribute('disabled', 'true');
+        setTimeout(function(){
+            submitButton.removeAttribute('disabled');
+            plusOne.classList.remove('elementToFadeOut');
+        }, 2000);
     }
     // these two lines will help go to the next item
     itemCounter++; 
@@ -67,6 +75,4 @@ choiceForm.addEventListener('submit', (event) => {
     }
     loadUpdatedScore();
     loadItem(itemCounter);
-    // still need to save items into two arrays 'spark' and 'thank'
-    // still need to redirect to end page when finished with item array
 });

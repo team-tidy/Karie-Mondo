@@ -29,7 +29,7 @@ span {
 #pic {
     width: 50px;
     height: auto;
-    border-radius: 100%;
+    border-radius: 10%;
     border: solid 2px rgb(79, 79, 79);
     vertical-align: middle;
 }
@@ -48,6 +48,7 @@ hr {
 #item-image {
     width: auto;
     height: 250px;
+    border-radius: 10%;
 }
 
 button {
@@ -62,3 +63,40 @@ button {
 button:hover {
     background-color: rgba(168, 247, 155, 0.522);
 }
+
+fieldset {
+    border: none;
+}
+
+#plusOne {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    margin: auto;
+    font-size: 3em;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.elementToFadeOut {
+animation-name: scoreAction;
+animation-duration: 2s;
+animation-iteration-count: 1;
+}
+
+@keyframes scoreAction {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@-o-keyframes scoreAction{
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@-moz-keyframes scoreAction{
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@-webkit-keyframes scoreAction{
+    from {opacity: 1}
+    to {opacity: 0}
+}   

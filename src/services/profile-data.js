@@ -10,8 +10,8 @@ const alex = {
 
 const erin = {
     id: 2,
-    name: '2',
-    image: 'Alex',
+    name: 'Erin',
+    image: 'Erin',
     keywords: {
         hat: 'I like the hats.',
         bear: 'I like the bears.',
@@ -20,9 +20,9 @@ const erin = {
 };
 
 const susan = {
-    id: 2,
-    name: '2',
-    image: 'Alex',
+    id: 3,
+    name: 'Susan',
+    image: 'Susan',
     keywords: {
         netherlands: 'I liked living there.',
         clarinet: 'I like playing it.',
