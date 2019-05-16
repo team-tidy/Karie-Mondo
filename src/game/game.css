@@ -37,11 +37,18 @@ label {
     margin-bottom: -10px;
 }
 
+#item-name {
+    font-style: italic;
+    margin-top: 4px;
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+
 button {
     background-color: rgba(218, 245, 213, 0.522);
     border: solid 1px rgb(106, 106, 106);
     color: rgb(60, 60, 60);
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-family: 'Belleza', sans-serif;
     margin: 3px 5px 5px 5px;
 }
@@ -52,6 +59,16 @@ button:hover {
 
 fieldset {
     border: none;
+}
+
+#joy-size {
+    font-size: 1.5em;
+    display: inline;
+}
+
+#thank-size {
+    font-size: 1.5em;
+    display: inline;
 }
 
 #score-animation {
