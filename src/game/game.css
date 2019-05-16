@@ -33,6 +33,7 @@ label {
     width: auto;
     height: 250px;
     border-radius: 10%;
+    margin-bottom: -10px;
 }
 
 button {
@@ -56,10 +57,8 @@ fieldset {
     width: 60px;
     height: 60px;
     opacity: 0;
-    margin: auto;
-    font-size: 2em;
-    border: 2px solid black;
-    border-radius: 100%;
+    font-size: 8em;
+    color: rgb(84, 84, 84);
 }
 
 .elementToFadeOut {
