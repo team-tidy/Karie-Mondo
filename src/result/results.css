@@ -44,14 +44,15 @@ hr {
 }
 
 #messages {
-    background-color: rgba(97, 97, 97, 0.563);
+    background-color: rgba(28, 134, 54, 0.425);
     text-align: center;
     text-shadow: 1px 1px 1px black;
     padding: 20px 20px 20px 20px;
     color: white;
     width: 700px;
     margin: auto;
-    margin-top: 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
 }
 
 p { 
