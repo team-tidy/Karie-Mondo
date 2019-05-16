@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <section></section>
+        <section id="score-animation"></section>
         <h1 id="title">Karie Mondo Game</h1>
         <section id="user-profile">
             <span id="avatar-image">
@@ -22,15 +22,18 @@
     </header>
     <hr>
     <main>
-        <p>Does this item spark joy for your character? Or is it clutter?</p>
+        <p>Does this item spark joy for your character? Or is it clutter? 
+            Check “Sparks Joy!” if you think the item belongs to the character 
+            based off the clues you read, or “Thank You, next” if the item would 
+            be clutter in your character’s house.</p>
+        <section id="score-animation"></section>
         <img id="item-image" alt="item-image">
         <p id="item-name"></p>
-        <section id="score-animation"></section>
         <form id="choice-form">
             <fieldset id="radio-buttons">
                 <span>
                     <input name="choices" value="sparks-joy" type="radio" id="sparks-joy">
-                    <label for="spark-joy">Sparks Joy!</label>
+                    <label for="sparks-joy">Sparks Joy!</label>
                 </span>
                 <span>
                     <input name="choices" value="thank-you" type="radio" id="thank-you">

@@ -7,8 +7,15 @@ header {
     font-size: 1.2em;
 }
 
+#game-title {
+   margin-top: -9px;
+   margin-bottom: -3px;
+   font-size: 2.3em;
+}
+
 h3 {
     font-style: italic;
+    margin-bottom: -8px;
 }
 
 img {
