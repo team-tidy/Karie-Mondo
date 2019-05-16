@@ -10,6 +10,8 @@ import isGuessCorrect from '../game/is-guess-correct.js';
 const avatarImage = document.getElementById('pic');
 const avatarName = document.getElementById('avatar-name');
 const choiceForm = document.getElementById('choice-form');
+const correctSound = document.getElementById('correct-sound');
+const wrongSound = document.getElementById('wrong-sound');
 
 let itemCounter = 0;
 const scoreToAdd = 1;
@@ -43,9 +45,11 @@ choiceForm.addEventListener('submit', (event) => {
         const updatedUser = updateUserScore(user, scoreToAdd);
         api.saveUser(updatedUser);
         animateScore(1);
+        correctSound.play();
     }
     else {
         animateScore(0);
+        wrongSound.play();
     }
 
     itemCounter++; 
