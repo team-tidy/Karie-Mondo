@@ -9,9 +9,6 @@ const avatarName = document.getElementById('avatar-name');
 const finalMessageDom = document.getElementById('final-message');
 const finalScore = document.getElementById('final-score');
 const playAgainButton = document.getElementById('play-again-button');
-const audio = document.getElementById('audio');
-
-audio.src = '../../assets/sounds/thank-you-next-clip.mp3';
 
 playAgainButton.addEventListener('click', () => {
     window.location = './';
