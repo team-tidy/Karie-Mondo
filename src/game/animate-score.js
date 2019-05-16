@@ -7,7 +7,7 @@ function animateScore(score) {
     setTimeout(function(){
         submitButton.removeAttribute('disabled');
         scoreAnimation.classList.remove('elementToFadeOut');
-    }, 2000);
+    }, 1000);
 }
 
 export default animateScore;
