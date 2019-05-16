@@ -12,6 +12,7 @@ header {
     grid-template-columns:1fr 1fr 1fr;
     text-align: center;
     column-gap: 25px;
+    margin-bottom: 20px;
 }
 
 #alex {
@@ -42,4 +43,23 @@ img {
     border: solid 2px rgb(79, 79, 79);
     margin-bottom: -5px;
     margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    font-family: 'Belleza', sans-serif;
+}
+
+#about-us-button {
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: rgba(218, 245, 213, 0.522);
+    border: solid 1px rgb(106, 106, 106);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about-us-button:hover {
+    background-color: rgba(168, 247, 155, 0.522);
 }
