@@ -1,5 +1,5 @@
 header {
-    margin-top: 15px;
+    /* height: 140px; */
     display: grid;
     padding: .100em 0;
     grid-template-columns:1fr auto 1fr;
@@ -7,16 +7,35 @@ header {
     background-color: #fae7e96e;
 }
 
-h1{
-    margin-top: 40px;
+#avatar-name {
+    display: block;
+    text-align: left;
 }
 
-span {
-    display: block;
+#stats {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#user-profile {
+    display: flex;
+    justify-content: flex-end;
+    height: 140px;
+}
+
+#avatar-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #score {
     display: inline;
+}
+
+#title {
+   margin-top: 35px;
 }
 
 hr {
@@ -44,12 +63,12 @@ label {
     height: 250px;
     border-radius: 10%;
     border: solid 3px rgb(79, 79, 79);
-    margin-bottom: -10px;
+    margin-bottom: 20px;
 }
 
 #item-name {
     font-style: italic;
-    margin-top: 4px;
+    margin-bottom: 4px;
     font-size: 1.6em;
     font-weight: bolder;
     text-shadow: 1px 1px 1px grey;
@@ -61,7 +80,7 @@ button {
     color: rgb(60, 60, 60);
     font-size: 1.4em;
     font-family: 'Belleza', sans-serif;
-    margin: 3px 5px 5px 5px;
+    margin: 30px 5px 5px 5px;
 }
 
 button:hover {
@@ -70,6 +89,19 @@ button:hover {
 
 fieldset {
     border: none;
+}
+
+#radio-buttons [type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#radio-buttons [type=radio]:checked + img {
+    /* box-shadow: 0 0 3px 3px white; */
+    border-radius: 100%;
+    border: 7px solid rgba(95, 155, 204, 0.71);
 }
 
 #joy-size {
