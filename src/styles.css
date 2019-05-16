@@ -1,10 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Belleza');
 
 body {
+    background-image: url('../../assets/background.jpg');
+    /* background-color: rgb(239, 250, 255); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
     font-family: 'Belleza', sans-serif;
     text-align: center;
 }
 
+h1 {
+    margin-top: 60px;
+    font-size: 3em;
+}
+
 p {
-    font-size: 16px;
+    font-size: 1.3em;
+}
+
+#user-profile {
+    color: rgb(97, 97, 97);
+    font-size: 1.5em;
+    text-align: right;
+    padding-right: 5px;
+}
+
+#pic {
+    width: 70px;
+    height: auto;
+    border-radius: 10%;
+    border: solid 2px rgb(79, 79, 79);
+    vertical-align: middle;
 }
