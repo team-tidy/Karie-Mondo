@@ -1,5 +1,5 @@
 header {
-    margin-top: 15px;
+    height: 140px;
     display: grid;
     padding: .100em 0;
     grid-template-columns:1fr auto 1fr;
@@ -7,12 +7,17 @@ header {
     background-color: #fae7e96e;
 }
 
-h1{
-    margin-top: 40px;
+span {
+    display: inline;
 }
 
-span {
-    display: block;
+#user-profile {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#title {
+   margin-top: 35px;
 }
 
 #score {
