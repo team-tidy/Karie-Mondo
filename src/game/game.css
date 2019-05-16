@@ -91,6 +91,19 @@ fieldset {
     border: none;
 }
 
+#radio-buttons [type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#radio-buttons [type=radio]:checked + img {
+    /* box-shadow: 0 0 3px 3px white; */
+    border-radius: 100%;
+    border: 7px solid rgba(95, 155, 204, 0.71);
+}
+
 #joy-size {
     font-size: 1.5em;
     display: inline;
