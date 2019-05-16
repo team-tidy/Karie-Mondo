@@ -7,30 +7,35 @@ header {
     background-color: #fae7e96e;
 }
 
-span {
+#avatar-name {
     display: block;
+    text-align: left;
 }
 
-/* #avatar-name {
-    display: block;
-} */
+#stats {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 #user-profile {
-    margin-right: 10px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    height: 140px;
+}
+
+#avatar-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#score {
+    display: inline;
 }
 
 #title {
    margin-top: 35px;
-}
-
-#score {
-    display: block;
-}
-
-#avatar-image {
-    float: left;
-    margin-left: 350px;
 }
 
 hr {
