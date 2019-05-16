@@ -77,11 +77,11 @@ button {
     background-color: rgba(218, 245, 213, 0.522);
     border: solid 1px rgb(106, 106, 106);
     color: rgb(60, 60, 60);
-    font-size: 1.4em;
     font-family: 'Belleza', sans-serif;
     margin: 30px 5px 5px 5px;
     padding: 20px;
     border-radius: 10px;
+    font-size: 1.5em;
 }
 
 button:hover {
