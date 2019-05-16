@@ -33,6 +33,7 @@ label {
     width: auto;
     height: 250px;
     border-radius: 10%;
+    border: solid 3px rgb(79, 79, 79);
     margin-bottom: -10px;
 }
 
@@ -54,11 +55,13 @@ fieldset {
 }
 
 #score-animation {
-    width: 60px;
-    height: 60px;
+    width: 160px;
+    height: 160px;
     opacity: 0;
     font-size: 8em;
     color: rgb(84, 84, 84);
+    border-radius: 100%;
+    border: solid 6px rgb(84, 84, 84);
 }
 
 .elementToFadeOut {
