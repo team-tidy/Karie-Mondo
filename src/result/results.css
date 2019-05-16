@@ -7,13 +7,34 @@ header {
     background-color: #fae7e96e;
 }
 
-span {
+#avatar-name {
     display: block;
+    text-align: left;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#user-profile {
+    display: flex;
+    justify-content: flex-end;
+    height: 140px;
+}
+
+#avatar-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #score {
     display: inline;
 }
+
 
 hr {
     color: rgb(77, 77, 77);
@@ -30,6 +51,7 @@ hr {
     color: white;
     width: 700px;
     margin: auto;
+    margin-top: 30px;
 }
 
 p { 
@@ -39,24 +61,35 @@ p {
 #play-again-button {
     display: block;
     margin: 20px auto 15px auto ;
-    /* margin-top: 30px; */
-}
-
-a {
-    font-size: 1.5em;
-    color: rgb(218, 245, 213);
-    text-shadow: 1px 1px 1px black;
-}
-
-button {
     background-color: rgba(218, 245, 213, 0.522);
     border: solid 1px rgb(106, 106, 106);
     color: rgb(60, 60, 60);
     font-size: 2em;
     font-family: 'Belleza', sans-serif;
-    margin: 3px 5px 5px 5px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-button:hover {
+#play-again-button:hover {
     background-color: rgba(168, 247, 155, 0.522);
 }
+
+a {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    font-family: 'Belleza', sans-serif;
+}
+
+#about-us-button {
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: rgba(218, 245, 213, 0.522);
+    border: solid 1px rgb(106, 106, 106);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about-us-button:hover {
+    background-color: rgba(168, 247, 155, 0.522);
+}
+
