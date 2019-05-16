@@ -35,10 +35,14 @@ img {
 }
 
 #alex {
-    background-color: rgba(219, 219, 181, 0.231);
+    background-color: rgba(255, 255, 255, 0.327);;
     padding: 15px 15px 15px 15px;
     border: solid 2px rgb(79, 79, 79);
     border-radius: 10%;
+}
+
+#alex:hover {
+    background-color: #bad6f767;
 }
 
 #erin {
@@ -48,15 +52,19 @@ img {
     border-radius: 10%;
 }
 
-#susan {
+#erin:hover {
     background-color: #bad6f767;
+}
+
+#susan {
+    background-color: rgba(255, 255, 255, 0.327);;
     padding: 15px 15px 15px 15px;
     border: solid 2px rgb(79, 79, 79);
     border-radius: 10%;
 }
 
-#Susan {
-   
+#susan:hover {
+    background-color: #bad6f767;
 }
 
 button {
@@ -81,6 +89,7 @@ fieldset {
     display: block;
     font-size: 1.2em;
 }
+
 p {
     font-size: 0.9em;
 }
