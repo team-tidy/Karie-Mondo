@@ -52,10 +52,9 @@ fieldset {
     border: none;
 }
 
-#plusOne {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
+#score-animation {
+    width: 60px;
+    height: 60px;
     opacity: 0;
     margin: auto;
     font-size: 2em;
