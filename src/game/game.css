@@ -1,5 +1,5 @@
 header {
-    height: 140px;
+    /* height: 140px; */
     display: grid;
     padding: .100em 0;
     grid-template-columns:1fr auto 1fr;
@@ -63,7 +63,7 @@ label {
     height: 250px;
     border-radius: 10%;
     border: solid 3px rgb(79, 79, 79);
-    margin-bottom: -10px;
+    margin-bottom: 20px;
 }
 
 #item-name {
@@ -80,7 +80,7 @@ button {
     color: rgb(60, 60, 60);
     font-size: 1.4em;
     font-family: 'Belleza', sans-serif;
-    margin: 3px 5px 5px 5px;
+    margin: 30px 5px 5px 5px;
 }
 
 button:hover {
