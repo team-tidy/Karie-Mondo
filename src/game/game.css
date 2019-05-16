@@ -1,5 +1,5 @@
 header {
-    margin-top: 20px;
+    margin-top: 15px;
     display: grid;
     padding: .100em 0;
     grid-template-columns:1fr auto 1fr;
@@ -26,9 +26,19 @@ hr {
     border: solid 1px;
 }
 
+#instructions {
+    text-align: center;
+    text-shadow: 1px 1px 1px grey;
+    padding: 20px 20px 20px 20px;
+    width: 700px;
+    margin: auto;
+    margin-top: -15px;
+}
+
 label {
     font-size: 1.2em; 
 }
+
 #item-image {
     width: auto;
     height: 250px;
@@ -42,6 +52,7 @@ label {
     margin-top: 4px;
     font-size: 1.6em;
     font-weight: bolder;
+    text-shadow: 1px 1px 1px grey;
 }
 
 button {
