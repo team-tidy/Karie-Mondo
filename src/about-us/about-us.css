@@ -63,3 +63,14 @@ a {
 #about-us-button:hover {
     background-color: rgba(168, 247, 155, 0.522);
 }
+
+ul {
+    text-align: left;
+    font-size: 1.3em; 
+}
+
+li {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 1.2em;
+}
