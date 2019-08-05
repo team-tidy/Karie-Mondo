@@ -8,4 +8,7 @@ You can view and interact with my deployed project here: https://team-tidy.githu
 
 ### The Tech ###
 
-We challenged ourselves by creating this project only using vanila JavaScript/CSS/HTML.
+We challenged ourselves by creating this project only using:
+* Vanila JavaScript
+* HTML/CSS
+* QUnit for testing
